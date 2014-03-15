@@ -1,0 +1,52 @@
+p{
+    background-color:black
+ }
+
+#container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;  
+}
+
+#container #header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  float: left;
+  border-bottom: #adde63 solid 1px;
+}
+
+#container #navbar {  
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 40px;
+   float: left;vertical-align;
+   border-bottom: #adde63 solid 1px;
+}
+
+#container #col1 {
+  width: 280px; 
+  float: left;
+}
+#container #col2outer {
+  width: 700px;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+#col2outer #col2mid {
+  width: 400px;
+  float: left;
+}
+#col2outer #col2side {
+  width: 280px;
+  float: right;
+}
+
+#container #footer {
+  float: left;
+  width: 100%;
+  border-top: #adde63 solid 1px;
+}
