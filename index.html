@@ -7,6 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
         <link href="css/jumbotron-narrow.css" rel="stylesheet">
+        <script src="jquery-2.1.1.min.js"></script>
+        <style>
+            img {margin-top:75px;}
+        </style>
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -29,13 +33,39 @@
         </div>
         <div class="container">
             <div class="jumbotron">
-            <p>Now building Ultimate Exit.</p>
-            <img src="ultimate_exit.png" style="width: 80%" />
+                <p>Prologue</p>
+                <div id="first"><a href="#second"><img src="prologue/01.gif" style="width: 80%; margin-top: 15px" /></a></div>
+                <div id="second"><a href="#third"><img src="prologue/02.gif" style="width: 80%" /></a></div>
+                <div id="third"><a href="#fourth"><img src="prologue/03.gif" style="width: 80%" /></a></div>
+                <div id="fourth"><a href="#fifth"><img src="prologue/04.gif" style="width: 80%" /></a></div>
+                <div id="fifth"><a href="#sixth"><img src="prologue/05.gif" style="width: 80%" /></a></div>
+                <div id="sixth"><a href="#seventh"><img src="prologue/06.gif" style="width: 80%" /></a></div>
+                <div id="seventh"><a href="#eighth"><img src="prologue/07.gif" style="width: 80%" /></a></div>
+                <div id="eighth"><a href="#ninth"><img src="prologue/08.gif" style="width: 80%" /></a></div>
+                <div id="ninth"><a href="#first"><img src="prologue/09.gif" style="width: 80%" /></a></div>
             </div>
         </div>
         <div id="footer">    
             <center><p>Copyright 2014 CD + JD</p></center>
         </div>
+
+        <script>
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+        </script>
     </body>
 
 </html>
