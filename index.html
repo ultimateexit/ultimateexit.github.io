@@ -86,9 +86,8 @@
 
         <script>
         var w = $(window).height() - 50;
-        $( "img" ).height(w * 7 / 8); 
-        $( "img" ).css( "padding-bottom", (w / 8 ));
-        $( "div.row" ).css( "margin-top", (w/16));
+        $( "img" ).height(w * 15 / 16); 
+        $( "img" ).css( "padding-bottom", (w / 16 ));
 
         $(function() {
           $('a[href*=#]:not([href=#])').click(function() {
@@ -98,7 +97,7 @@
               target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
               if (target.length) {
                 $('html,body').animate({
-                  scrollTop: target.offset().top - 50 - w/8
+                  scrollTop: target.offset().top - 50 - w/16
                 }, 1000);
                 return false;
               }
