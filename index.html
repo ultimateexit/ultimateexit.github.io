@@ -8,8 +8,8 @@
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
         <!-- link href="css/jumbotron-narrow.css" rel="stylesheet"  -->
         <script src="jquery-2.1.1.min.js"></script>
+        <script src="gallery.js"></script>
         <style>
-            img { padding-top:75px; }
             body { padding-top: 65px; }
         </style>
     </head>
@@ -31,16 +31,16 @@
                 </div><!--/.nav-collapse -->
             </div>
         </div>
-        <div class="container"  >
+        <div class="container" >
                 <p class="text-center">Prologue</p>
-                <div class="row text-center">
+                <div class="row text-center" >
                     <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <a href="#second"><img src="prologue/01.gif" class="img-responsive" style="padding-top: 25px"/></a>
+                        <a href="#second"><img src="prologue/01.gif" class="img-responsive first" id="firstImg" /></a>
                     </div>
                 </div>
-                <div class="row text-center">
+                <div class="row text-center panel">
                     <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="second"><a href="#third"><img src="prologue/02.gif" class="img-responsive" /></a></div>
+                        <div id="second"><a href="#third"><img src="prologue/02.gif" class="img-responsive nf" /></a></div>
                     </div>
                 </div>
                 <div class="row text-center">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="ninth"><a href="#"><img src="prologue/09.gif" style="width: 80%" /></a></div>
+                        <div id="ninth"><a href="#"><img src="prologue/09.gif" class="img-responsive" /></a></div>
                     </div>
                 </div>
         </div>
@@ -84,6 +84,11 @@
         </div>
 
         <script>
+        var w = $(window).height() - 50;
+        $( "img" ).height(w * 7 / 8); 
+        $( "img" ).css( "padding-bottom", (w / 8 ));
+        $( "div.row" ).css( "margin-top", (w/16));
+
         $(function() {
           $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -92,13 +97,16 @@
               target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
               if (target.length) {
                 $('html,body').animate({
-                  scrollTop: target.offset().top
+                  scrollTop: target.offset().top - 50 - w/8
                 }, 1000);
                 return false;
               }
             }
           });
         });
+
+        
+
         </script>
     </body>
 
