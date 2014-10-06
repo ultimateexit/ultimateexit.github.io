@@ -33,51 +33,69 @@
             </div>
         </div>
         <div class="container" >
-                <p class="text-center">Prologue</p>
-                <div class="row text-center" >
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <a href="#second" class="down"><img src="prologue/01.gif" class="img-responsive first" id="firstImg" /></a>
-                    </div>
+           <p class="text-center">Prologue</p>
+           <div class="row" id="prologue" class="group">
+               <div class="col-md-9">
+                   <div class="row text-center" >
+                       <div class="col-md-8 col-md-offset-4 text-center" id="first">
+                           <a href="#second" class="down"><img src="prologue/01.gif" class="img-responsive first" id="firstImg" /></a>
+                       </div>
+                   </div>
+                   <div class="row text-center panel">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="second"><a href="#third" class="down"><img src="prologue/02.gif" class="img-responsive nf" /></a></div>
+                       </div>
+                   </div>
+                   <div class="row text-center">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="third"><a href="#fourth" class="down" ><img src="prologue/03.gif" class="img-responsive"/></a></div>
+                       </div>
+                   </div>
+                   <div class="row text-center">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="fourth"><a href="#fifth" class="down"><img src="prologue/04.gif" class="img-responsive"/></a></div>
+                       </div>
+                   </div>
+                   <div class="row text-center">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="fifth"><a href="#sixth" class="down"><img src="prologue/05.gif" class="img-responsive"/></a></div>
+                       </div>
+                   </div>
+                   <div class="row text-center">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="sixth"><a href="#seventh" class="down"><img src="prologue/06.gif" class="img-responsive"/></a></div>
+                       </div>
+                   </div>
+                   <div class="row text-center">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="seventh"><a href="#eighth" class="down"><img src="prologue/07.gif" class="img-responsive"/></a></div>
+                       </div>
+                   </div>
+                   <div class="row text-center">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="eighth"><a href="#ninth" class="down"><img src="prologue/08.gif" class="img-responsive"/></a></div>
+                       </div>
+                   </div>
+                   <div class="row text-center">
+                       <div class="col-md-8 col-md-offset-4 text-center">
+                           <div id="ninth"><a href="#first" style="cursor: url(css/up.png), auto;"><img src="prologue/09.gif" class="img-responsive" /></a></div>
+                       </div>
+                   </div>
                 </div>
-                <div class="row text-center panel">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="second"><a href="#third" class="down"><img src="prologue/02.gif" class="img-responsive nf" /></a></div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="third"><a href="#fourth" class="down" ><img src="prologue/03.gif" class="img-responsive"/></a></div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="fourth"><a href="#fifth" class="down"><img src="prologue/04.gif" class="img-responsive"/></a></div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="fifth"><a href="#sixth" class="down"><img src="prologue/05.gif" class="img-responsive"/></a></div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="sixth"><a href="#seventh" class="down"><img src="prologue/06.gif" class="img-responsive"/></a></div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="seventh"><a href="#eighth" class="down"><img src="prologue/07.gif" class="img-responsive"/></a></div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="eighth"><a href="#ninth" class="down"><img src="prologue/08.gif" class="img-responsive"/></a></div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6 col-md-offset-3 text-center" id="first">
-                        <div id="ninth"><a href="#first" style="cursor: url(css/up.png), auto;"><img src="prologue/09.gif" class="img-responsive" /></a></div>
-                    </div>
+                <div class="col-md-3">
+               <div class="row">
+    <!--Nav Bar -->
+    <nav class="col-xs-3 bs-docs-sidebar hidden-print">
+        <ul id="sidebar" class="nav nav-stacked fixed">
+            <li>
+                <a href="#prologue">Prologue</a>
+            </li>
+            <li>
+                <a href="#">Chapter 1</a>
+            </li>
+        </ul>
+    </nav>
+</div> 
                 </div>
         </div>
         <div id="footer">    
@@ -105,6 +123,10 @@
           });
         });
 
+$('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+});
         
 
         </script>
