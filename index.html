@@ -11,11 +11,16 @@
         <script src="gallery.js"></script>
         <style>
             body { padding-top: 65px; }
-            a.down { cursor: url(css/arrow01.gif), auto; }
+            a.down { cursor: url(css/down.gif), auto; }
+            .navbar {
+                background-color: transparent;
+                background: transparent;
+            }
+            .navbar li { color: #000 } 
         </style>
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"  style="background-image:url(css/header.gif);">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -78,7 +83,7 @@
                    </div>
                    <div class="row text-center">
                        <div class="col-md-8 col-md-offset-4 text-center">
-                           <div id="ninth"><a href="#first" style="cursor: url(css/up-arrow.gif), auto;"><img src="prologue/09.gif" class="img-responsive" /></a></div>
+                           <div id="ninth"><a href="#first" style="cursor: url(css/up.gif), auto;"><img src="prologue/09.gif" class="img-responsive" /></a></div>
                        </div>
                    </div>
                 </div>
@@ -104,9 +109,13 @@
 </div> 
                 </div>
         </div>
-        <div id="footer">    
-            <center><p>Copyright 2014 CD + JD</p></center>
         </div>
+
+    <footer class="footer">
+      <div class="container" style="background-image:url(css/footer.gif);">
+        <p class="text-muted">Copyright 2014 CD + JD</p>
+      </div>
+    </footer>
 
         <script>
         var w = $(window).height() - 50;
